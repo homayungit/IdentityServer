@@ -9,7 +9,6 @@ namespace MagicVilla_Identity
         public const string Admin = "admin";
         public const string Customer = "customer";
 
-
         public static IEnumerable<IdentityResource> IdentityResources =>
             new List<IdentityResource>
             {
@@ -17,6 +16,7 @@ namespace MagicVilla_Identity
                 new IdentityResources.Email(),
                 new IdentityResources.Profile(),
             };
+
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
@@ -47,8 +47,8 @@ namespace MagicVilla_Identity
                         IdentityServerConstants.StandardScopes.Email,
                         JwtClaimTypes.Role
                     },
-                    RedirectUris={ "https://localhost:7002/signin-oidc" },
-                    PostLogoutRedirectUris={"https://localhost:7002/signout-callback-oidc" },
+                    RedirectUris={ "https://localhost:7167/signin-oidc" },
+                    PostLogoutRedirectUris={"https://localhost:7167/signout-callback-oidc" },
                 }
             };
     }
